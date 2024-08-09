@@ -1,0 +1,51 @@
+body{
+    margin: 0
+}
+.nav{
+background-color: rgb(30, 130, 255);
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 2rem;
+padding: 0 1rem;
+align-items: stretch;
+}
+
+.nav ul{
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    
+}
+
+.site-title{
+    font-size: 3rem;
+}
+.nav a{
+    
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li.active{
+    background-color: rgb(17, 120, 255);
+
+}
+.nav li:hover{
+    background-color: rgb(43, 142, 249);
+}
+
+body{
+    
+    background-color: silver;
+    text-align: center;
+}
