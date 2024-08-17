@@ -1,10 +1,41 @@
-# Getting Started with Create React App
+# Reciept Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
 
-## Available Scripts
+The goal of this project is to  simplifu the process of tracking and managing receipts by leveraging Amazon Web Services (AWS). This solution automates the extraction and storage of receipt data, offering an efficient way to handle receipts digitally.
 
-In the project directory, you can run:
+### Features
+
+Receipt Upload: Users can upload receipts via a React frontend, which sends the receipts to an Amazon S3 bucket.
+Text Extraction: Amazon Textract analyzes the uploaded receipts and extracts relevant information, such as items and prices.
+Data Storage: Extracted data is then stored in an Amazon DynamoDB table and is displayed on the React frontend
+
+### Technologies Used
+React: Frontend framework used for the user interface and receipt upload functionality.
+Amazon S3: Storage for uploaded receipt images.
+Amazon Textract: Service for extracting text from images.
+Amazon DynamoDB: NoSQL database for storing extracted data.
+
+This project was created by Haseeb Siddiqi
+
+
+### 
+
+React Home page 
+()
+
+()
+
+
+
+## How to run
+
+Make sure flask boto3 npm
+cd flask
+python app.py
+
+In a seprate terminal type
+npm start 
 
 ### `npm start`
 

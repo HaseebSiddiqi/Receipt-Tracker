@@ -1,15 +1,35 @@
 body{
-    margin: 0
+    margin-top: auto;
+    margin: 0;
+    background-color: #e0e0e0; /* Slightly lighter silver for a softer look */
+    color: #333; /* Dark grey for better readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure #root is at least as tall as the viewport */
+}
+.footer{
+    background-color: #1e82ff;
+   
+   
+    padding: 5px;
+    color: white;
+    margin-top: auto;
+    
 }
 .nav{
-background-color: rgb(30, 130, 255);
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 2rem;
-padding: 0 1rem;
-align-items: stretch;
+    background-color: #1e82ff; /* Maintained the blue but made it slightly softer */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    align-items: stretch;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .nav ul{
@@ -37,75 +57,80 @@ align-items: stretch;
 }
 
 .nav li.active{
-    background-color: rgb(17, 120, 255);
+    background-color: #1178ff; /* Darker shade for active links */
 
 }
 .nav li:hover{
-    background-color: rgb(43, 142, 249);
+    background-color: #2b8ef9; /* Softer hover color for a polished look */
 }
 
-body{
-    
-    background-color: silver;
-    text-align: center;
-}
+
 
 
 .form{
-    border: 3px solid black;
+    border: 2px solid #333; /* Refined border width */
     display: inline-block;
     padding: 20px;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 1.125rem; /* Font size set in rem for better scalability */
     justify-content: center;
-    font-size: 22px;
-    border-radius: 20px;
+    border-radius: 10px; /* Smaller border-radius for a modern look */
+    background-color: #d3d2d2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
     margin-bottom: 15px;
-    background-color: rgb(211, 210, 210);
 }
 .form input {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px; /* Increased padding for better touch targets */
     margin-bottom: 15px;
-    background-color: silver;
-    width:280px;
-    border: 2px solid black;
+    background-color: rgb(206, 192, 192); /* Softer background color */
+    width: 280px;
+    border: 1px solid #333; /* Refined border for input fields */
+    border-radius: 5px; /* Added subtle rounding */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 .label{
     margin-bottom: 35px;
 }
 .form button {
-    font-size: 20px;
-    
-    padding: 5px;
+    font-size: 1.2rem;
+    padding: 10px; /* Increased padding for better touch targets */
     margin-bottom: 15px;
-   
+    background-color: #1e82ff; /* Matched button color with the navbar */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Subtle rounding for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+.form button:hover {
+    background-color: #1178ff; /* Darker shade on hover */
 }
 
 .image{
-    border: 3px solid black;
-    border-radius: 20px;
+    border: 2px solid #333; /* Refined border width */
+    border-radius: 10px; /* Subtle rounding */
     display: inline-block;
     padding: 20px;
-   
-    background-color: rgb(211, 210, 210);
+    background-color: #d3d2d2;
     margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 .extracted {
     display: inline-block;
-    padding: 5px;
-    font-size: 20px;
-    background-color: rgb(211, 210, 210);
-    border: 3px solid black;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    font-weight: 900;
-    text-align:justify;
     padding: 10px;
+    font-size: 1.125rem;
+    background-color: #d3d2d2;
+    border: 2px solid #333; /* Refined border width */
+    border-radius: 10px; /* Subtle rounding */
+    margin-bottom: 15px;
+    font-weight: 600; /* Reduced font weight for better readability */
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
     
 }
 
@@ -117,6 +142,59 @@ ul {
 .container {
     display: flex;
     gap: 20px;
-   
     justify-content:  center;
 }
+.picker{
+    padding: 5px;
+    font-size: 1.125rem;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+/* Ensure table styles are applied correctly */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff; /* White background for the table */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #1e82ff; /* Blue border */
+    margin-bottom: 40px;
+}
+
+/* Header styles */
+th {
+    background-color: #1e82ff; /* Blue background for headers */
+    color: white; /* White text for readability */
+    padding: 12px;
+    border-bottom: 2px solid #0056b3; /* Darker blue border for separation */
+    font-size: 1.4rem;
+    text-align: center;
+}
+th:hover{
+    background-color: #104a90;
+}
+/* Cell styles */
+td {
+    padding: 10px;
+     /* Light grey background for cells */
+    font-size: 1.2rem;
+    border: 1px solid #ddd; /* Light grey border for bottom separation */
+}
+
+/* Row styles */
+tr:nth-child(even) {
+    background-color: #eef2f5; /* Brighter and lighter blue for even rows */
+    
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+    
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #cce4ff; /* Slightly darker blue for hover effect */
+}
+
