@@ -21,16 +21,22 @@ This project was created by Haseeb Siddiqi
 
 ### 
 
-React Home page 
-(https://github.com/HaseebSiddiqi/Receipt-Tracker/blob/master/images/Receipt%20home%20page.png)
+## React Home Page
 
+![React Home Page](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Receipt%20home%20page.png)
 
-(https://github.com/HaseebSiddiqi/Receipt-Tracker/blob/master/images/Receipt%20upload.png)
+## Receipt Upload
 
-Receipts are uploaded to a S3 bucket
-(https://github.com/HaseebSiddiqi/Receipt-Tracker/blob/master/images/s3%20bucket.png)
+![Receipt Upload](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Receipt%20upload.png)
 
-The extracted information is stored in DynamoDB and then displayed here
-(https://github.com/HaseebSiddiqi/Receipt-Tracker/blob/master/images/Reciepts%20table.png)
+## S3 Bucket
 
+Receipts are uploaded to an S3 bucket:
 
+![S3 Bucket](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/s3%20bucket.png)
+
+## DynamoDB Table
+
+The extracted information is stored in DynamoDB and then displayed here:
+
+![DynamoDB Table](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Reciepts%20table.png)
