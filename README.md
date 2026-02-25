@@ -2,13 +2,13 @@
 
 ### Overview
 
-The goal of this project is to  simplifu the process of tracking and managing receipts by leveraging Amazon Web Services (AWS). This solution automates the extraction and storage of receipt data, offering an efficient way to handle receipts digitally.
+The goal of this project is to  simplify the process of tracking and managing receipts by leveraging Amazon Web Services (AWS). This projects automates the extraction and storage of receipt data, offering an easy way to handle receipts digitally.
 
 ### Features
 
 Receipt Upload: Users can upload receipts via a React frontend, which sends the receipts to an Amazon S3 bucket.
 
-Text Extraction: Amazon Textract analyzes the uploaded receipts and extracts relevant information, such as items and prices.
+Text Extraction: Amazon Textract analyzes the uploaded receipts and extracts important information, such as items and prices.
 
 Data Storage: Extracted data is then stored in an Amazon DynamoDB table and is displayed on the React frontend
 
