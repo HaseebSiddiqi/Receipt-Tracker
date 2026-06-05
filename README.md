@@ -45,3 +45,35 @@ Receipts are uploaded to an S3 bucket:
 The extracted information is stored in DynamoDB and then displayed here:
 
 ![DynamoDB Table](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Reciepts%20table.png)
+
+
+
+
+---
+
+## Setup Instructions
+
+### 1. Install Python dependencies
+
+Run inside the `flask/` folder:
+
+```bash
+python -m pip install flask boto3 flask-cors python-dotenv
+
+### 2. Create .env file 
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=us-east-1
+
+AWS_BUCKET_NAME=my-receipts
+DYNAMODB_TABLE=Receipts
+
+#3 Run backend 
+cd flask
+python app.py
+
+#4 Install npm dependencies
+npm install
+
+#5 Run frontend
+npm start

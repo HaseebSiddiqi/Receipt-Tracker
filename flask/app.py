@@ -2,20 +2,30 @@ from flask import Flask, request, jsonify, send_file
 import boto3
 from flask_cors import CORS
 import io
+import os
+from dotenv import load_dotenv
+
+print("KEY:", os.getenv("AWS_ACCESS_KEY_ID"))
+print("SECRET:", os.getenv("AWS_SECRET_ACCESS_KEY"))
+
+# Load .env file
+load_dotenv()
+
+region = os.getenv("AWS_REGION", "us-east-1")
+bucket_name = os.getenv("AWS_BUCKET_NAME", "my-receipts")
+table_name = os.getenv("DYNAMODB_TABLE", "Receipts")
+
 
 app = Flask(__name__)
 CORS(app)
 
 # Initialize the S3 and Textract clients
-s3 = boto3.client('s3')
-textract = boto3.client('textract')
-bucket_name = 'my-receipts'  # Replace with your actual bucket name.
 
-
-
-dynamodb = boto3.resource('dynamodb')
-table_name = 'Receipts'  # Replace with your actual table name
+s3 = boto3.client('s3', region_name=region)
+textract = boto3.client('textract', region_name=region)
+dynamodb = boto3.resource('dynamodb', region_name=region)
 table = dynamodb.Table(table_name)
+
 
 
 def parse_textract_response(response):
