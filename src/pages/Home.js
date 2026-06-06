@@ -55,48 +55,49 @@ export default function Home() {
         <div className="home-wrapper">
             <h1>Upload Receipts</h1>
             <div className="main-content">
-            <form onSubmit={handleUpload} className='form'>
-                <label htmlFor="fileInput" className="custom-file-upload">
-                Choose a receipt to upload. Ensure the file name is unique and the image is clear.
-                </label>
-                <br />
-                <input
-                    type="file"
-                    id="fileInput"
-                    name="file"
-                    accept="image/*"
-                    required
-                    onChange={handleFileChange}
-                    disabled={isLoading}
-                />
-                <br />
-                <button type="submit" disabled={isLoading}>
-                    {isLoading ? 'Extracting text...' : 'Upload Image'}
-                </button>
-                {uploadStatus && <p>{uploadStatus}</p>}
+                <div className="left-column" style={{ display: 'flex', flexDirection: 'column', gap: '30px', width: '100%', maxWidth: '500px' }}>
+                    <form onSubmit={handleUpload} className='form'>
+                        <label htmlFor="fileInput" className="custom-file-upload">
+                        Choose a receipt to upload. Ensure the file name is unique and the image is clear.
+                        </label>
+                        <br />
+                        <input
+                            type="file"
+                            id="fileInput"
+                            name="file"
+                            accept="image/*"
+                            required
+                            onChange={handleFileChange}
+                            disabled={isLoading}
+                        />
+                        <br />
+                        <button type="submit" disabled={isLoading}>
+                            {isLoading ? 'Extracting text...' : 'Upload Image'}
+                        </button>
+                        {uploadStatus && <p>{uploadStatus}</p>}
+                    </form>
 
-            </form>
+                    {items.length > 0 && (
+                        <div className='extracted'>
+                            <h3>Extracted Items and Prices</h3>
+                            <ul>
+                                {items.map((item, index) => (
+                                    <li key={index}>{item}: {prices[index]}</li>
+                                ))}
+                            </ul>
+                            <p>SUBTOTAL: {subtotal}</p>
+                            <p>TOTAL: {total}</p>
+                        </div>
+                    )}
+                </div>
 
-            <div className='container'>
-                {image && (
-                    <div className='image'>
-                        <img src={image} alt="Preview" style={{ maxWidth: '400px', height: 'auto' }} />
-                    </div>
-                )}
-
-                {items.length > 0 && (
-                    <div className='extracted'>
-                        <h3>Extracted Items and Prices</h3>
-                        <ul>
-                            {items.map((item, index) => (
-                                <li key={index}>{item}: {prices[index]}</li>
-                            ))}
-                        </ul>
-                        <p>SUBTOTAL: {subtotal}</p>
-                        <p>TOTAL: {total}</p>
-                    </div>
-                )}
-            </div>
+                <div className='container'>
+                    {image && (
+                        <div className='image'>
+                            <img src={image} alt="Preview" style={{ maxWidth: '400px', height: 'auto' }} />
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

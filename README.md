@@ -26,10 +26,6 @@ This project was created by Haseeb Siddiqi
 
 ### 
 
-## React Home Page
-
-![React Home Page](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Receipt%20home%20page.png)
-
 ## Receipt Upload
 
 ![Receipt Upload](https://github.com/HaseebSiddiqi/Receipt-Tracker/raw/master/images/Receipt%20upload.png)
